@@ -1,0 +1,100 @@
+<div id="DIV_1">
+	<div id="DIV_2">
+		<h1 id="H1_3">
+			Hồ sơ của tôi
+		</h1>
+		<div id="DIV_4">
+			Quản lý thông tin hồ sơ để bảo mật tài khoản
+		</div>
+	</div>
+	<div id="DIV_5">
+		<div id="DIV_6">
+			<form id="FORM_7" [formGroup]="user" (ngSubmit)="updateAuth()">
+				<table id="TABLE_8">
+					<tr id="TR_16">
+						<td id="TD_17">
+							<label id="LABEL_18">
+								Tên
+							</label>
+						</td>
+						<td id="TD_19">
+							<div id="DIV_20">
+								<div id="DIV_21">
+									<input type="text" formControlName="name"  id="INPUT_22"  />
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr id="TR_23">
+						<td id="TD_24">
+							<label id="LABEL_25">
+								Email
+							</label>
+						</td>
+						<td id="TD_26">
+                            <div id="DIV_20">
+								<div id="DIV_21">
+									<input type="text" formControlName="email" id="INPUT_22" />
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr id="TR_37">
+						<td id="TD_38">
+							<label id="LABEL_39">
+								Giới tính
+							</label>
+						</td>
+						<td id="TD_40">
+							<div id="DIV_41">
+								<div id="DIV_42">
+									<div id="DIV_gender1">
+                                        <label id="LABEL_gender2">
+                                            Giới tính
+                                        </label>
+                                        <label id="LABEL_gender3">
+                                            <input type="radio" name="gender" formControlName="gender" value="Nam"  /><span id="SPAN_gender6">Nam</span>
+                                        </label>
+                                        <label id="LABEL_gender7">
+                                            <input type="radio" name="gender" formControlName="gender" value="Nữ"  /><span id="SPAN_gender10">Nữ</span>
+                                        </label>
+                                        <label id="LABEL_gender11">
+                                            <input type="radio" name="gender" formControlName="gender" value="Khác"  /><span id="SPAN_gender14">Khác</span>
+                                        </label>
+                                    </div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr id="TR_61">
+						<td id="TD_62">
+							<label id="LABEL_63">
+								Ngày sinh
+							</label>
+						</td>
+						<td id="TD_64">
+							<div id="DIV_65">
+								<div id="DIV_66">
+									<div id="DIV_67">
+                                        <input type="date" [value]="user.get('dateOfBirth')?.value | date:'yyyy-MM-dd'"  formControlName="dateOfBirth"  id="date" name="date">
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr id="TR_84">
+						<td id="TD_85">
+							<label id="LABEL_86">
+							</label>
+						</td>
+						<td id="TD_87">
+							<button type="submit" id="BUTTON_88">
+								Lưu
+							</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>

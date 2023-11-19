@@ -1,0 +1,88 @@
+<div class="container">
+    <div id="DIV_1">
+        <div id="DIV_2">
+            <div id="DIV_3">
+                <div id="DIV_4">
+                    <div id="DIV_5">
+                        <div id="DIV_6">
+                            <div id="DIV_7">
+                                Địa chỉ của tôi
+                            </div>
+                            <div id="DIV_8">
+                            </div>
+                        </div>
+                        <div id="DIV_9">
+                            <div id="DIV_10">
+                                <div id="DIV_11">
+                                    <a href="/address/add">
+                                        <button id="BUTTON_12">
+                                            Thêm địa chỉ mới
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DIV_18">
+                        <div id="DIV_19">
+                            <div id="DIV_20">
+                                <div id="DIV_21">
+                                    <svg id="svg_22">
+                                        <circle id="circle_23">
+                                        </circle>
+                                        <circle id="circle_24">
+                                        </circle>
+                                        <circle id="circle_25">
+                                        </circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="DIV_26">
+                            <div id="DIV_27">
+                                Địa chỉ
+                            </div>
+                            <div id="DIV_47" *ngFor="let item of address">
+                                <div id="DIV_48">
+                                    <div id="DIV_49">
+                                        <div id="DIV_50">
+                                            <div id="DIV_52">
+                                                {{item.user.name}}
+                                            </div>
+                                            <div id="DIV_53">
+                                            </div>
+                                            <div id="DIV_54">
+                                                {{item.phone}}
+                                            </div>
+                                        </div>
+                                        <div id="DIV_55">
+                                            <button id="BUTTON_56"
+                                                (click)="updateAddress(item._id)">
+                                                Cập nhật
+                                            </button>
+                                            <button id="BUTTON_57"
+                                                (click)="removeAddress(item._id)">
+                                                Xóa
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="DIV_58">
+                                        <div id="DIV_59">
+                                            <div id="DIV_60">
+                                                <div id="DIV_61">
+                                                    {{item.address}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DIV_65">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

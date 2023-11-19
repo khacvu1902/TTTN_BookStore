@@ -1,0 +1,92 @@
+<div class="container-home">
+
+    <div class="bread-crumb">
+        Trang chủ
+    </div>
+    <div class="home d-flex">
+        <div class="home-product">
+            <h1 class="title-product">Nhà Sách Tiki</h1>
+            <div class="grid" *ngIf="products && products.length">
+                <div class="contain-product" *ngFor="let product of products">
+                    <div class="product d-flex fd al-c">
+                        <div class="contain-img-product">
+                            <a href="/detail_product/{{product._id}}">
+                                <img src="{{product.image}}" alt>
+                            </a>
+                        </div>
+                        <div class="origin">
+                            <img
+                                src="https://salt.tikicdn.com/ts/tka/69/cf/22/1be823299ae34c7ddcd922e73abd4909.png"
+                                alt>
+                        </div>
+                        <div class="name-product">
+                            {{product.name}}
+                        </div>
+                        <div class="rating-list d-flex al-c">
+                            <div class="contain-star">
+                                <svg width="12" height="12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"><g
+                                        clip-path="url(#a)"><path
+                                            d="M6.448 2.029a.5.5 0 0 0-.896 0L4.287 4.59l-2.828.41a.5.5 0 0 0-.277.854l2.046 1.994-.483 2.816a.5.5 0 0 0 .726.528L6 9.863l2.53 1.33a.5.5 0 0 0 .725-.527l-.483-2.817 2.046-1.994a.5.5 0 0 0-.277-.853L7.713 4.59 6.448 2.029Z"
+                                            fill="rgb(255, 196, 0)"></path></g><defs><clippath
+                                            id="a"><path fill="#fff"
+                                                transform="translate(1 1.5)"
+                                                d="M0 0h10v10H0z"></path></clippath></defs></svg>
+                                <svg width="12" height="12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"><g
+                                        clip-path="url(#a)"><path
+                                            d="M6.448 2.029a.5.5 0 0 0-.896 0L4.287 4.59l-2.828.41a.5.5 0 0 0-.277.854l2.046 1.994-.483 2.816a.5.5 0 0 0 .726.528L6 9.863l2.53 1.33a.5.5 0 0 0 .725-.527l-.483-2.817 2.046-1.994a.5.5 0 0 0-.277-.853L7.713 4.59 6.448 2.029Z"
+                                            fill="rgb(255, 196, 0)"></path></g><defs><clippath
+                                            id="a"><path fill="#fff"
+                                                transform="translate(1 1.5)"
+                                                d="M0 0h10v10H0z"></path></clippath></defs></svg>
+                                <svg width="12" height="12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"><g
+                                        clip-path="url(#a)"><path
+                                            d="M6.448 2.029a.5.5 0 0 0-.896 0L4.287 4.59l-2.828.41a.5.5 0 0 0-.277.854l2.046 1.994-.483 2.816a.5.5 0 0 0 .726.528L6 9.863l2.53 1.33a.5.5 0 0 0 .725-.527l-.483-2.817 2.046-1.994a.5.5 0 0 0-.277-.853L7.713 4.59 6.448 2.029Z"
+                                            fill="rgb(255, 196, 0)"></path></g><defs><clippath
+                                            id="a"><path fill="#fff"
+                                                transform="translate(1 1.5)"
+                                                d="M0 0h10v10H0z"></path></clippath></defs></svg>
+                                <svg width="12" height="12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"><g
+                                        clip-path="url(#a)"><path
+                                            d="M6.448 2.029a.5.5 0 0 0-.896 0L4.287 4.59l-2.828.41a.5.5 0 0 0-.277.854l2.046 1.994-.483 2.816a.5.5 0 0 0 .726.528L6 9.863l2.53 1.33a.5.5 0 0 0 .725-.527l-.483-2.817 2.046-1.994a.5.5 0 0 0-.277-.853L7.713 4.59 6.448 2.029Z"
+                                            fill="rgb(255, 196, 0)"></path></g><defs><clippath
+                                            id="a"><path fill="#fff"
+                                                transform="translate(1 1.5)"
+                                                d="M0 0h10v10H0z"></path></clippath></defs></svg>
+                                <svg width="12" height="12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"><g
+                                        clip-path="url(#a)"><path
+                                            d="M6.448 2.029a.5.5 0 0 0-.896 0L4.287 4.59l-2.828.41a.5.5 0 0 0-.277.854l2.046 1.994-.483 2.816a.5.5 0 0 0 .726.528L6 9.863l2.53 1.33a.5.5 0 0 0 .725-.527l-.483-2.817 2.046-1.994a.5.5 0 0 0-.277-.853L7.713 4.59 6.448 2.029Z"
+                                            fill="rgb(255, 196, 0)"></path></g><defs><clippath
+                                            id="a"><path fill="#fff"
+                                                transform="translate(1 1.5)"
+                                                d="M0 0h10v10H0z"></path></clippath></defs></svg>
+                            </div>
+                            <div class="divided"></div>
+                            <div class="sold">
+                                Đã bán 5k+
+                            </div>
+
+                        </div>
+                        <div class="contain-price d-flex al-c">
+                            <div class="price">
+                                {{product.price}}đ
+                            </div>
+                            <div class="discount">
+                                -{{product.sale}}%
+                            </div>
+                        </div>
+                        <div class="super-ship">
+                            Giao siêu tốc 2H
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

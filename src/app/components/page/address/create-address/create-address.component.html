@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Biểu Mẫu Thêm Sản Phẩm</h1>
+    <form action="" [formGroup]="address" (ngSubmit)="postAddress()">
+        <label for="productName">địa chỉ:</label>
+        <input type="text" id="productName" formControlName="address" name="name" required><br><br>
+        
+        <label for="productName">Số Điện Thoại:</label>
+        <input type="text" id="productImage" formControlName="phone" name="image" required><br><br>
+
+        <input type="submit" value="Thêm Sản Phẩm">
+    </form>
+</div>
+

@@ -1,0 +1,126 @@
+<div id="DIV_1">
+	<div id="DIV_2">
+		<div id="DIV_3">
+			<div id="DIV_4">
+				<div id="DIV_5">
+					<div id="DIV_6">
+						<div id="DIV_7">
+							<div id="DIV_8">
+								<p id="P_9">
+									tổng tiền sản phẩm 
+								</p>
+								<h5 id="H5_10" >
+									${{totalPrice}}
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="DIV_15">
+			<div id="DIV_16">
+				<div id="DIV_17">
+					<div id="DIV_18">
+						<div id="DIV_19">
+							<div id="DIV_20">
+								<p id="P_21">
+									số lượng đơn hàng
+								</p>
+								<h5 id="H5_22">
+									{{numberOfOrders}}
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="DIV_39">
+			<div id="DIV_40">
+				<div id="DIV_41">
+					<div id="DIV_42">
+						<div id="DIV_43">
+							<div id="DIV_44">
+								<p id="P_45">
+									tổng giá trị hàng hóa
+								</p>
+								<h5 id="H5_46">
+									${{totalOder}}
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="DIV_51">
+		<div id="DIV_52">
+			<div id="DIV_53">
+				<div id="DIV_54">
+					<div id="DIV_55">
+						<div id="DIV_56">
+							<div id="DIV_57">
+								<p id="P_58">
+									Built by developers
+								</p>
+								<h5 id="H5_59">
+									Soft UI Dashboard
+								</h5>
+								<p id="P_60">
+									From colors, cards, typography to complex elements, you will find the full documentation.
+								</p> <a href="javascript:;" id="A_61">Read More<i id="I_62"></i></a>
+							</div>
+						</div>
+						<div id="DIV_63">
+							<div id="DIV_64">
+								<img src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/shapes/waves-white.svg" alt="waves" id="IMG_65" />
+								<div id="DIV_66">
+									<img src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/illustrations/rocket-white.png" alt="rocket" id="IMG_67" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="DIV_68">
+			<div id="DIV_69">
+				<div id="DIV_70">
+					<span id="SPAN_71"></span>
+					<div id="DIV_72">
+						<h5 id="H5_73">
+							Work with the rockets
+						</h5>
+						<p id="P_74">
+							Wealth creation is an evolutionarily recent positive-sum game. It is all about who take the opportunity first.
+						</p> <a href="javascript:;" id="A_75">Read More<i id="I_76"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>image</th>
+				<th>price</th>
+				<th>quantity</th>
+				<th>sale</th>
+			</tr>
+		</thead>
+		<tbody *ngIf="products && products.length" >
+			<tr *ngFor="let item of products ; index as i">
+				<td>{{i+1}}</td>
+				<td>{{item.name}}</td>
+				<td><img src="{{item.image}}" alt="" style="width: 50px;"></td>
+				<td>{{item.price}}</td>
+				<td>{{item.quantity}}</td>
+				<td>{{item.sale}}</td>
+			</tr>
+		</tbody>
+	</table> 
+</div>

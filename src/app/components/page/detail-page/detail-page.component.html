@@ -1,0 +1,193 @@
+<div class="container-product">
+    <div class="bread-crumb">
+        Trang chủ
+        <svg width="6" height="11" viewBox="0 0 6 11" fill="none"
+            xmlns="http://www.w3.org/2000/svg"><path fill="#808089"
+                fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L6.35355 5.64645C6.54882 5.84171 6.54882 6.15829 6.35355 6.35355L1.35355 11.3536C1.15829 11.5488 0.841709 11.5488 0.646447 11.3536C0.451184 11.1583 0.451184 10.8417 0.646447 10.6464L5.29289 6L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"></path></svg>
+        Storytelling With Data - Kể Chuyện Thông Qua Dữ Liệu (Cuốn Cẩm Nang
+        Hướng Dẫn Trực Quan Hóa Dữ Liệu)
+    </div>
+    <div class="contain-product-detail d-flex" *ngIf="product">
+        <div class="information-product d-flex">
+            <div class="contain-img-product">
+                <img src="{{product.image}}"
+                    style="width: 300px; height: 400px;" alt>
+                <div class="description">
+                    <h4>mô tả</h4>
+                    <p>{{product.desc}}</p>
+                </div>
+            </div>
+            <div class="information-text-product d-flex fd">
+                <div
+                    class="detail-product-information block-product-detail d-flex fd">
+                    <div class="brandAuthor d-flex al-c">
+                        <img
+                            src="https://salt.tikicdn.com/ts/upload/d7/56/04/b93b8c666e13f49971483596ef14800f.png"
+                            alt>
+                        <div class="author">
+                            Tác giả: <span class="name-author"> Cole Nussbaumer
+                                Knaflic</span>
+                        </div>
+                    </div>
+                    <div class="name-product-detail">
+                        {{product.name}}
+                    </div>
+                    <div class="ratingList d-flex al-c">
+                        5.0
+                        <span class="star-rate d-flex">
+                            <svg stroke="currentColor" fill="currentColor"
+                                stroke-width="0" viewBox="0 0 24 24" size="16"
+                                color="#FFC400" style="color:#FFC400"
+                                height="16" width="16"
+                                xmlns="http://www.w3.org/2000/svg"><path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                            <svg stroke="currentColor" fill="currentColor"
+                                stroke-width="0" viewBox="0 0 24 24" size="16"
+                                color="#FFC400" style="color:#FFC400"
+                                height="16" width="16"
+                                xmlns="http://www.w3.org/2000/svg"><path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                            <svg stroke="currentColor" fill="currentColor"
+                                stroke-width="0" viewBox="0 0 24 24" size="16"
+                                color="#FFC400" style="color:#FFC400"
+                                height="16" width="16"
+                                xmlns="http://www.w3.org/2000/svg"><path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                            <svg stroke="currentColor" fill="currentColor"
+                                stroke-width="0" viewBox="0 0 24 24" size="16"
+                                color="#FFC400" style="color:#FFC400"
+                                height="16" width="16"
+                                xmlns="http://www.w3.org/2000/svg"><path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                            <svg stroke="currentColor" fill="currentColor"
+                                stroke-width="0" viewBox="0 0 24 24" size="16"
+                                color="#FFC400" style="color:#FFC400"
+                                height="16" width="16"
+                                xmlns="http://www.w3.org/2000/svg"><path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                        </span>
+                        <div class="divided"></div>
+                    </div>
+                    <div class="contain-price d-flex al-c">
+                        <div class="price">
+                            {{product.price}}đ
+                        </div>
+                        <div class="discount">
+                            -{{product.sale}}%
+                        </div>
+                    </div>
+                </div>
+                <div class="contain-ship block-product-detail">
+                    <h3 class="title-block-product-detail">Thông tin vận chuyển</h3>
+                    <p>Giao đến Q. Hoàn Kiếm, P. Hàng Trống, Hà Nội</p>
+                </div>
+                <div class="relate-product block-product-detail">
+                    <h3 class="title-block-product-detail">Sản phẩm tương tự</h3>
+                    <div class="list-relate-products">
+                        <div *ngFor="let items of products">
+                            <!-- ---------------- -->
+                            <div class="relate-product-item d-flex fd">
+                                <div class="img-relate-product">
+                                    <img
+                                        src="{{items.image}}"
+                                        alt>
+                                </div>
+                                <div class="info-relate">
+                                    <div appEllipsis class="name-product-relate">
+                                        {{items.name}}
+                                    </div>
+                                    <div class="price-relate-product">
+                                        {{items.price}}₫
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ---------------- -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div id="comments">
+                        <h2>Bình luận</h2>
+                        <div class="product-detail">
+                            <!-- ... other details ... -->
+                            <div class="rating-chart">
+                                <span *ngFor="let _ of stars; let i = index"
+                                    [class.active]="i < productRating"
+                                    (click)="onStarClick(i + 1)">
+                                    ★
+                                </span>
+                                <button (click)="submitRating()">đánh giá</button>
+                            </div>
+                        </div>
+
+                        <div id="commentList">
+                            <div *ngFor="let item of comment"
+                                class="comment-item">
+                                <div class="user-info">
+                                    <div *ngFor="let rating of userRate">
+                                        <div class="user-rating">
+                                            <div class="rating-chart">
+                                                <span
+                                                    *ngFor="let _ of stars; let i = index"
+                                                    [class.active]="i < rating.rating">
+                                                    ★
+                                                </span>
+                                            </div>
+                                            <p>{{ rating.comment }}</p>
+                                        </div>
+                                    <strong>{{item.userId.name}}</strong><br>
+                                    <span class="comment-date">{{item.createdAt
+                                        | date:'medium'}}</span>
+                                    </div>
+                                </div>
+                                <p class="comment-content">{{item.content}}</p>
+                                <!-- Các phần tử HTML khác mà bạn muốn hiển thị trong mỗi bình luận -->
+                                <button (click)="deleteComment(item._id)">remove
+                                    comment</button>
+                            </div>
+
+                        </div>
+                        <form id="commentForm" [formGroup]="post"
+                            (ngSubmit)="createCommentByIdProduct()">
+                            <textarea id="commentInput"
+                                formControlName="content"
+                                placeholder="Viết bình luận của bạn tại đây"
+                                required></textarea><br><br>
+                            <button class="comment" type="submit">Gửi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="add-to-cart d-flex fd">
+            <h3 class="title-block-product-detail">Số Lượng</h3>
+            <form class="add-to-cart d-flex fd" action>
+                <div class="contain-quantity d-flex">
+                    <button (click)="decreaesQuantity()"
+                        class="subtraction d-flex al-c jf-c">
+                        <img
+                            src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-remove.svg"
+                            alt>
+                    </button>
+                    <input type="text" #quantity [defaultValue]="1">
+                    <button (click)="imcreaesQuantity()"
+                        class="subtraction d-flex al-c jf-c">
+                        <img
+                            src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-add.svg"
+                            alt>
+                    </button>
+                </div>
+                <h3 class="total-value-text title-block-product-detail">Tạm tính</h3>
+                <span class="total-value">{{product.price}}</span>
+                <button type="submit" (click)="addProductCart(product._id)"
+                    class="add-to-cart-btn">Thêm
+                    vào giỏ</button>
+            </form>
+
+        </div>
+    </div>
+</div>

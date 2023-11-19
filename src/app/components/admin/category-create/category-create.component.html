@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Biểu Mẫu Thêm Sản Phẩm</h1>
+    <form action="" [formGroup]="category" (ngSubmit)="postCategory()">
+        <label for="productName">Tên Sản Phẩm:</label>
+        <input type="text" id="productName" formControlName="name" name="name" required><br><br>
+        <div *ngIf="category.get('name')?.hasError('required')" class="error-message">
+            tên sản phẩm là bắt buộc.
+        </div>
+        <input type="submit" [disabled]="category.invalid" value="Thêm Sản Phẩm">
+    </form>
+</div>

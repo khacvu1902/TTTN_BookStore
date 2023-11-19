@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.order-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+.order-summary,
+.shipping-info,
+.order-items {
+    margin-bottom: 20px;
+}
+
+.order-summary p,
+.shipping-info p,
+.item p {
+    margin: 10px 0;
+}
+
+.item {
+    display: flex;
+    margin: 20px;
+}
+
+.item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+/* CSS code như đã cung cấp ở trước đó */
+
+.totals {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.totals h2 {
+    color: #333;
+}
+
+/* ... (các phần khác của file CSS) ... */
+
+.totals button.payment-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boder {
+    border: #2980b9 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove{
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+    
+}
+
+.totals button.payment-button:hover {
+    background-color: #2980b9;
+}

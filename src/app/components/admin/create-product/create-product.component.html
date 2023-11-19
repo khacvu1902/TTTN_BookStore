@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>Biểu Mẫu Thêm Sản Phẩm</h1>
+    <form action="" [formGroup]="products" (ngSubmit)="postProduct()">
+        <label for="productName">Tên Sản Phẩm:</label>
+        <input type="text" id="productName" formControlName="name" name="name" required><br><br>
+        <div *ngIf="products.get('name')?.hasError('required')" class="error-message">
+            tên sản phẩm là bắt buộc.
+        </div>
+        <label for="productName">Ảnh Sản Phẩm:</label>
+        <input type="text" id="productImage" formControlName="image" name="image" required><br><br>
+        <div *ngIf="products.get('image')?.hasError('required')" class="error-message">
+            ảnh sản phẩm là bắt buộc.
+        </div>
+        <label for="productPrice">Giá Sản Phẩm:</label>
+        <input type="number" id="productPrice" formControlName="price" name="price" required><br><br>
+        <div *ngIf="products.get('price')?.hasError('required')" class="error-message">
+            chưa nhập giá sản phẩm.
+        </div>
+        <label for="productPrice">Số Lượng Sản Phẩm:</label>
+        <input type="number" id="productQuantity" formControlName="quantity" name="quantity" required><br><br>
+        <div *ngIf="products.get('quantity')?.hasError('required')" class="error-message">
+            chưa nhập số lượng sản phẩm.
+        </div>
+        <label for="productPrice">Sale Sản Phẩm:</label>
+        <input type="number" id="productQuantity" formControlName="sale" name="sale" required><br><br>
+        
+        <label for="category">Danh Mục:</label>
+        <select id="category" formControlName="categoryId" name="categoryId" >
+            <option *ngFor="let category of categories" [value]="category._id">{{category.name}}</option>
+        </select>
+        <div *ngIf="products.get('categoryId')?.hasError('required')" class="error-message">
+            chọn danh mục sản phẩm.
+        </div>
+        <br><br>
+
+        <label for="productDescription">Mô Tả Sản Phẩm:</label><br>
+        <textarea id="productDescription" formControlName="desc" name="desc" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" [disabled]="products.invalid" value="Thêm Sản Phẩm">
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="order-container">
+	<h2>Order Items</h2>
+	<div class="order-items" *ngFor="let item of order">
+		<!-- Danh sách các sản phẩm trong đơn hàng -->
+		<div class="boder">
+			<div>
+				<div class="item" *ngFor="let product of products.products">
+					<img src="{{product.product.image}}" alt="Product 1">
+					<div class="item-details">
+						<p><strong>Product Name:</strong>{{product.product.name}}</p>
+						<p><strong>Quantity:</strong>{{product.quantity}}</p>
+						<p><strong>Price per unit:</strong> ${{product.price}}</p>
+						<p><strong>Name:</strong> John Doe</p>
+						<p><strong>Address:</strong>{{item.address.address}}</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<button class="remove" (click)="cancelOrder(item._id)">remove oder</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="totals">
+		<h2>Totals</h2>
+		<button class="payment-button">Buy $</button>
+	</div>
+</div>

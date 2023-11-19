@@ -1,0 +1,82 @@
+<header class="header d-flex">
+    <div class="wrapper d-flex jf-b">
+        <div class="logo">
+            <img
+                src="https://salt.tikicdn.com/ts/upload/c1/64/f7/4e6e925ea554fc698123ea71ed7bda26.png"
+                alt>
+        </div>
+        <div class="headerCenter d-flex fd ">
+            <div class="contain-input-search d-flex al-c">
+                <img width="20" class="iconSearch"
+                    src="https://salt.tikicdn.com/ts/upload/33/d0/37/6fef2e788f00a16dc7d5a1dfc5d0e97a.png" />
+                <input class="inputSearch" type="text"
+                    (input)="onSearchChange()" placeholder="Search..."
+                    [(ngModel)]="searchText">
+                <button class="textSearch">Tìm kiếm</button>
+            </div>
+            <div>
+                <ul class="boder">
+                    <li *ngFor="let item of searchResults|search:searchText ">
+                        <a style="padding: 20px;" href="/detail_product/{{item._id}}">{{item.name}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="key-word">
+                <div *ngFor="let idca of categories">
+                    <a [routerLink]="['/category/{{idca._id}}']"><span>{{idca.name}}</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="headerRight fd d-flex">
+            <div class="headerNavigation d-flex al-c">
+                <div class="headerNavigationItem d-flex al-c">
+                    <img class="iconLink"
+                        src="https://salt.tikicdn.com/ts/upload/b4/90/74/6baaecfa664314469ab50758e5ee46ca.png"
+                        alt>
+                    <a href="/"><span class="headerNavigationItemName">Trang chủ</span></a>
+
+                </div>
+                <div class="headerNavigationItem d-flex al-c">
+                    <img class="iconLink"
+                        src="https://salt.tikicdn.com/ts/upload/41/28/7d/4713aa0d2855c5c770799f248692f0c5.png"
+                        alt>
+                    <a href="/order/getAll"><span
+                            class="headerNavigationItemName">Order</span></a>
+                </div>
+                <div class="headerNavigationItem d-flex al-c">
+                    <img class="iconLink"
+                        src="https://salt.tikicdn.com/ts/upload/07/d5/94/d7b6a3bd7d57d37ef6e437aa0de4821b.png"
+                        alt>
+                    <a>
+                        <span *ngIf="user" [routerLink]="['/user/',user?._id]"
+                            class="headerNavigationItemName">Tài khoản
+                            {{user?.name}}</span>
+                        <span *ngIf="!user" [routerLink]="['/signin']"
+                            class="headerNavigationItemName">Tài khoản</span>
+                    </a>
+
+                </div>
+                <div class="divider"></div>
+                <div class="card-wrapper d-flex al-c" *ngIf="cartProduct">
+                    <a
+                        [routerLink]="['/user/{{cartProduct.items.product._id}}/cart']">
+                        <img
+                            class="iconLink"
+                            src="https://salt.tikicdn.com/ts/upload/51/e2/92/8ca7e2cc5ede8c09e34d1beb50267f4f.png"
+                            alt>
+                        <span class="card-counter">{{cartProduct.length}}</span>
+                    </a>
+
+                </div>
+            </div>
+            <div class="location-ship d-flex" *ngFor="let item of address">
+                <img width="20"
+                    src="https://salt.tikicdn.com/ts/upload/88/5c/9d/f5ee506836792eb7775e527ef8350a44.png"
+                    alt>
+                <span class="ship-to">Giao đến:</span>
+                <a class="location" href="/address">{{item.address}}</a>
+            </div>
+        </div>
+    </div>
+</header>
+<router-outlet />

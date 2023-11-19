@@ -1,0 +1,187 @@
+<div class="cart" *ngIf="cartProduct && cartProduct.length">
+    <div id="DIV_1">
+        <div id="DIV_19">
+            <svg id="svg_23">
+                <g id="g_24">
+                    <path id="path_25">
+                    </path>
+                </g>
+                <defs id="defs_26">
+                    <clippath id="clipPath_27">
+                        <rect id="rect_28">
+                        </rect>
+                    </clippath>
+                </defs>
+            </svg><span id="SPAN_29">Tất cả (1 sản phẩm)</span><span
+                id="SPAN_30">Đơn giá</span><span id="SPAN_31">Số lượng</span><span
+                id="SPAN_32">Thành tiền</span><img
+                src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/trash.svg"
+                alt="deleted" id="IMG_33" />
+        </div>
+        <div id="DIV_34">
+            <div id="DIV_35">
+                <div id="DIV_36">
+                    <div id="DIV_37">
+                        <label id="LABEL_38">
+                            <input type="checkbox" id="INPUT_39" /><span
+                                id="SPAN_40"></span>
+                        </label>
+                        <svg id="svg_41">
+                            <g id="g_42">
+                                <path id="path_43">
+                                </path>
+                            </g>
+                            <defs id="defs_44">
+                                <clippath id="clipPath_45">
+                                    <rect id="rect_46">
+                                    </rect>
+                                </clippath>
+                            </defs>
+                        </svg><img
+                            src="https://salt.tikicdn.com/ts/upload/30/24/79/8317b36e87e7c0920e33de0ab5c21b62.png"
+                            alt="seller-link" id="IMG_47" /><a
+                            href="https://tiki.vn/cua-hang/tiki-trading"
+                            id="A_48">Tiki Trading<img
+                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/Path.svg"
+                                alt="seller-link" id="IMG_49" /></a>
+                    </div>
+                    <div *ngFor="let cartProducts of cartProduct">
+
+                        <div id="DIV_50">
+                            <div id="DIV_51">
+                                <div id="DIV_52">
+                                    <label id="LABEL_53">
+                                        <input type="checkbox"
+                                            [(ngModel)]="cartProducts.isChecked"
+                                            (change)="onCheckboxChange(cartProducts)"
+                                            [checked]="selectedItems.includes(cartProducts)" 
+                                            (change)="toggleSelection(cartProducts)" />
+                                    </label>
+                                    <svg id="svg_56">
+                                        <g id="g_57">
+                                            <path id="path_58">
+                                            </path>
+                                        </g>
+                                        <defs id="defs_59">
+                                            <clippath id="clipPath_60">
+                                                <rect id="rect_61">
+                                                </rect>
+                                            </clippath>
+                                        </defs>
+                                    </svg>
+                                    <a
+                                        href="https://tiki.vn/product-p250109584.html?spid=271046178"
+                                        id="A_62">
+                                        <picture id="PICTURE_63">
+                                            <source id="SOURCE_64" /><img
+                                                src="{{cartProducts.product.image}}"
+                                                width="80" height="80"
+                                                id="IMG_65"
+                                                alt />
+                                        </picture>
+                                    </a>
+
+                                    <div id="DIV_66">
+                                        <a
+                                            href="https://tiki.vn/product-p250109584.html?spid=271046178"
+                                            title="Điện thoại Xiaomi Redmi Note 12 (4GB/128GB) - Hàng chính hãng - Xám"
+                                            id="A_67">{{cartProducts.product.name}}
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div id="DIV_69">
+                                    <div id="DIV_70">
+                                        {{cartProducts.product.price}}<sup
+                                            id="SUP_71">₫</sup>
+                                    </div>
+                                </div>
+                                <div id="DIV_72">
+                                    <div id="DIV_73">
+                                        <button
+                                            (click)="decreaesQuantity(cartProducts)"
+                                            id="SPAN_74"><img
+                                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/decrease.svg"
+                                                alt="decrease" id="IMG_75" />
+                                        </button>
+                                        <input type="tel"
+                                            value="{{cartProducts.quantity}}"
+                                            id="INPUT_76" />
+                                        <button
+                                            (click)="imcreaesQuantity(cartProducts)"
+                                            id="SPAN_77"><img
+                                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/increase.svg"
+                                                alt="increase" id="IMG_78" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="DIV_79">
+                                    {{cartProducts.price * (1-
+                                    cartProducts.product.sale / 100)}}<sup
+                                        id="SUP_80">₫</sup>
+                                </div>
+                                <div id="DIV_81">
+                                    <button (click)="deleteProduct(cartProducts)" class="BUTTON_82">
+                                        <img
+                                            src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/trash.svg"
+                                            alt="deleted" width="17" height="17"
+                                            id="IMG_82" />
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="DIV_BUY_1">
+        <div id="DIV_BUY_2">
+            <div id="DIV_BUY_3">
+                <div id="DIV_BUY_4">
+                </div>
+                <div id="DIV_BUY_5">
+                    <div id="DIV_BUY_6">
+                        <div id="DIV_BUY_7">
+                            Tiki Khuyến Mãi
+                        </div>
+                        <div id="DIV_BUY_8">
+                            <span id="SPAN_BUY_9">Có thể chọn 2</span>
+                        </div>
+                    </div>
+                    <div id="DIV_BUY_14">
+                    </div>
+                    <div id="DIV_BUY_15">
+                        <svg id="svg_BUY_16">
+                            <path id="path_BUY_17">
+                            </path>
+                            <path id="path_BUY_18">
+                            </path>
+                            <path id="path_BUY_19">
+                            </path>
+                            <path id="path_BUY_20">
+                            </path>
+                        </svg><span id="SPAN_BUY_21">Chọn hoặc nhập Khuyến mãi khác</span>
+                    </div>
+                </div>
+            </div>
+            <div id="DIV_BUY_22" *ngIf="totalPrice">
+                <div id="DIV_BUY_32">
+                    <span id="SPAN_BUY_33">Tổng tiền</span>
+                    <div id="DIV_BUY_34">
+                        <div id="DIV_BUY_35">
+                            {{totalPrice}}₫
+                        </div>
+                        <span id="SPAN_BUY_36">(Đã bao gồm khuyến mãi sản phẩm)</span>
+                    </div>
+                </div>
+            </div>
+            <button routerLink="/order/getAll" (click)="createOrder()" id="BUTTON_BUY_37" *ngIf="totalItems">
+                Mua Hàng ({{totalItems}})
+            </button>
+
+        </div>
+    </div>
+</div>
